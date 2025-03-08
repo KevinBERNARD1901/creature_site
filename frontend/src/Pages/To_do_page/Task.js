@@ -4,9 +4,7 @@ function Task({task}) {
   return (
     <>
         <div>
-          {task.id};
-          <p>{task.title}</p>
-          <p>{task.status}</p>
+          <p>{task.id} {task.title} {task.status}</p>
         </div>
     </>
   )

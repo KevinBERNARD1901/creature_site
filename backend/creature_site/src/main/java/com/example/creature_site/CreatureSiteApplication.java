@@ -9,5 +9,4 @@ public class CreatureSiteApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CreatureSiteApplication.class, args);
 	}
-
 }

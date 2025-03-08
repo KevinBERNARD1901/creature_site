@@ -7,10 +7,9 @@ function To_do() {
 
     const getTasks = async function() {
         try {
-            const response = await fetch(`${base_url_api}/tasks/all`)
+            const response = await fetch(`${base_url_api}/tasks`)
             const data = await response.json();
-            console.log(data);
-            return data;
+            setTasks(data);
         } catch(err) {
             console.log(err)
         }
@@ -28,9 +27,8 @@ function To_do() {
                 }
             });
             const data = await response.json();
-            console.log("apres le get")
             console.log(data);
-            setTasks(data);
+            return data;
         } catch(err) {
             console.log(err)
         }
@@ -47,6 +45,9 @@ function To_do() {
                     <Task key={task.id} task={task} />
                 ))}
             </ul>
+            <button onClick={() => {
+                
+            }}/>
         </>
     );
 };
